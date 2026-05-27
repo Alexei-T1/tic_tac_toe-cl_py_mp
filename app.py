@@ -6,23 +6,34 @@ GAMER_F = "X"
 GAMER_S = "O"
 USED_FIELD = 'used_field'
 WRONG_INPUT ='wrong_input'
-GAME_END = False
+
 
 field = [[None, None, None] for i in range(3)]
 draw_field(field) 
 
-while not GAME_END:
-    x_step = input_step(field, GAMER_F)
+def game():
+    GAME_END = False
+    while not GAME_END:
 
-    x, y = x_step
-    field[y-1][x-1] = GAMER_F
+        x_step = input_step(field, GAMER_F)
+        x, y = x_step
+        field[y-1][x-1] = GAMER_F
 
-    step_o = input_o(field)
+        o_step = input_o(field)
+        if o_step:
+            x, y = o_step
+            field[y][x] = GAMER_S
 
-    check_field(field)   
-    draw_field(field)
+        result_check = check_field(field)
+        draw_field(field)
+        
+        if result_check:
+            if result_check == GAMER_F or result_check == GAMER_S:
+                print(f'WIN!!! - {result_check}')
+            else:
+                print(f' {result_check}  ')
+            GAME_END = True
 
-    print(step_o) 
     
     
-    GAME_END = True
+    
