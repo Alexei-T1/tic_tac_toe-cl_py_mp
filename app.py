@@ -8,11 +8,10 @@ USED_FIELD = 'used_field'
 WRONG_INPUT ='wrong_input'
 
 
-field = [[None, None, None] for i in range(3)]
-draw_field(field) 
-
 def game():
     GAME_END = False
+    field = [[None, None, None] for i in range(3)]
+    draw_field(field) 
     while not GAME_END:
 
         x_step = input_step(field, GAMER_F)
