@@ -1,11 +1,7 @@
 
 from random import randint
 from check_ import check_step
-
-GAMER_F = "X"
-GAMER_S = "O"
-USED_FIELD = 'used_field'
-WRONG_INPUT ='wrong_input'
+from consts import GAMER_F, GAMER_S, USED_FIELD, WRONG_INPUT
 
 def input_o(field):
     x, y = (randint(0,2), randint(0,2))

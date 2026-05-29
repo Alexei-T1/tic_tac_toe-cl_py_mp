@@ -2,10 +2,7 @@ from check_ import check_field
 from draw_field import draw_field
 from input import input_o, input_step
 
-GAMER_F = "X"
-GAMER_S = "O"
-USED_FIELD = 'used_field'
-WRONG_INPUT ='wrong_input'
+from consts import GAMER_F, GAMER_S, USED_FIELD, WRONG_INPUT
 
 
 def output_result(result_check):
