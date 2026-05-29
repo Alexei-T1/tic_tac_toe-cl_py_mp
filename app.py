@@ -33,6 +33,7 @@ def game():
             field[y-1][x-1] = GAMER_F
 
             result_check = check_field(field)
+            draw_field(field)
             if result_check:
                 output_result(result_check)
                 break
