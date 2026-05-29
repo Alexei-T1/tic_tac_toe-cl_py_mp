@@ -1,6 +1,6 @@
 from check_ import check_field
 from draw_field import draw_field
-from input import input_o, input_step
+from user_input import input_o, input_step
 
 from consts import GAMER_F, GAMER_S, USED_FIELD, WRONG_INPUT
 
