@@ -15,11 +15,11 @@ def check_field(field):
         if field[i].count(GAMER_S) == 3:
             return GAMER_S
         
-        for s in range(3):
-            if field[0][s] == field[1][s]  == field[2][s] == GAMER_F:
-                return GAMER_F
-            if field[0][s] == field[1][s]  == field[2][s] == GAMER_S:
-                return GAMER_S
+    for s in range(3):
+        if field[0][s] == field[1][s]  == field[2][s] == GAMER_F:
+            return GAMER_F
+        if field[0][s] == field[1][s]  == field[2][s] == GAMER_S:
+            return GAMER_S
             
     if field[0][0] == field[1][1] == field[2][2] == GAMER_F:
         return GAMER_F
