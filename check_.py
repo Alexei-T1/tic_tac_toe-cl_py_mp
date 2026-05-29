@@ -41,6 +41,8 @@ def check_step(step, field):
     try:
         x, y = step.split(',')
         x, y = int(x), int(y)
+        if x < 1 or x > 3 or y < 1 or y > 3:
+            return WRONG_INPUT
     except:
         return WRONG_INPUT
     return USED_FIELD if field[y-1][x-1] == GAMER_F or field[y-1][x-1] == GAMER_S else (x,y)
